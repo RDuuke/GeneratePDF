@@ -1,0 +1,18 @@
+{
+    "name": "jduque/generador-certificados",
+    "authors": [
+        {
+            "name": "Juan Duque",
+            "email": "juuanduuke@gmail.com"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^7.0",
+        "twig/twig": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Certificado\\" : "src/"
+        }
+    }
+}

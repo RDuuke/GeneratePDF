@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<style>
+
+body
+{
+    background-origin: content-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h2 {
+    color:blue;
+}
+.container
+{
+    position: relative;
+    z-index:10000;
+    text-align:center;
+    padding-top: 2em;
+    padding-bottom: 0;
+    font-size: 2em;
+}
+small
+{
+    font-size: 15px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>{{ usuario.titulo | upper }}</h2>
+    <h3>{{ usuario.nombre | capitalize  }}</h3>
+    <br>
+    {{ usuario.tipo | capitalize }}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <small>{{ usuario.texto_extra | capitalize  }} </small>
+</div>
+</body>
+</html>

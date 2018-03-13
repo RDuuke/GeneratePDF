@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<style>
+*{
+    margin: 0;
+    padding:0;
+    font-family: "Roboto";
+}
+body
+{
+    background-origin: content-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+            -webkit-print-color-adjust: exact
+
+}
+.title {
+    margin: 0;
+    text-shadow: 2px 3px #D3336C;
+    color: #FFEC00;
+    -webkit-print-color-adjust:exact;
+    -webkit-filter:opacity(1);
+    font-size:1.5em;
+
+}
+.container
+{
+    position: relative;
+    z-index:10000;
+    text-align:center;
+    padding-top: 2em;
+    padding-bottom: 0;
+    font-size: 2em;
+}
+.texto
+{
+    margin-top: 7em;
+    margin-bottom: 1em;
+}
+.content_firma
+{
+    width: 80%;
+    margin: auto;
+    padding-top: 3em;
+}
+.content_firma .firma
+{
+    display: inline-block;
+    width:30%;
+}
+.firma p {
+    font-size:10pt;
+}
+.izq{
+    float: left;
+}
+.der {
+    float: right;
+}
+hr{
+    padding: 0;
+    margin: 0;
+}
+p
+{
+    font-size: 15pt;
+    margin: 0;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <p class="texto">Certifica que:</p>
+    <div class="title"><i>{{ usuario.nombre | title }}</i></div>
+    <p>CC. {{ usuario.documento }}</p>
+    <br>
+    <div class="title"><i>{{ usuario.titulo }}</i></div>
+    <p>{{ usuario.subtitulo | replace({'DD/MM/AAAA' : fecha })  }}</p>
+    <div class="content_firma">
+        <div class="firma izq">
+            <hr>
+            <p>Salomón Cruz</p>
+            <p>Sub Director de Sapiencia</p>
+        </div>
+        <div class="firma der">
+            <hr>
+            <p>Gianny Rozo Zapata</p>
+            <p>Gerente @Medellón</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
