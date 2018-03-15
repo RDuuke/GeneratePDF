@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<style>
+*{
+    margin: 0;
+    padding:0;
+    font-family: "robotocod";
+    color:#6F6F6E;
+
+}
+body{
+    background-origin: content-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    -webkit-print-color-adjust: exact
+
+}
+h1{
+    color:#0D9091;
+    font-family:'theblack';
+    margin:0;
+    font-size:2.5em;
+}
+h2{
+    color:#6F6F6E;
+    margin:0;
+    font-weight:normal;
+}
+p{
+    font-size: 15pt;
+    margin: 0;
+    color:#6F6F6E;
+}
+.container
+{
+    position: relative;
+    z-index:10000;
+    text-align:center;
+    padding-top: 2em;
+    padding-bottom: 0;
+    font-size: 2em;
+}
+.content_firma .firma
+{
+    display: inline-block;
+    width:30%;
+}
+.firma p {
+    font-size:11pt;
+}
+.izq{
+    float: left;
+}
+.der {
+    float: right;
+}
+hr{
+    padding: 0;
+    margin: 0;
+}
+#contentfirma{
+    width:60%;
+    margin: auto;
+}
+#contentfirma .firma{
+    padding-top: 2em;
+    width: 30%;
+}
+.izq{
+    float:left;
+}
+.der{
+    float:right;
+}
+#contentfirma .firma hr
+{
+    display:block;
+    width: 50%;
+}
+.separator
+{
+    height:.5em;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<br>
+<br>
+<br>
+<br>
+<br>
+    <p>Confiere certificado de participación en el</p>
+    <h2>{{ usuario.titulo }} </h2>
+    <h1>{{ usuario.nombre | title }}</h1>
+    <p>cc. {{ usuario.documento }} de Medellín</p>
+    <div class="separator"></div>
+    <p>{{ usuario.texto_extra }}</p>
+    <p><strong>Medellín, 28 de abril de 2018</strong></p>
+    <div id="contentfirma">
+        <div class="firma izq">
+            <hr>
+            <p><strong>Salomón Cruz</strong></p>
+            <p>Sub-Director de Sapiencia</p>
+        </div>
+        <div class="firma der">
+            <hr>
+            <p><strong>Johanna Quiroz Gil</strong></p>
+            <p>Director operativo de extensión</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

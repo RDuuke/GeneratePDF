@@ -8,9 +8,12 @@ use Mpdf\Config\ConfigVariables;
 use Mpdf\Config\FontVariables;
 use Mpdf\Language\LanguageToFontInterface;
 define( "DS" , DIRECTORY_SEPARATOR);
-$tipo = 2;
+$tipo = 0;
+$documento = '1038409053';
+$tabla_usuario = 'vocacional';
+
 $pdo = PDOConexion::instance()->getConexion();
-$usuario = new Usuario('1038409053', 'vocacional', 2, $pdo);
+$usuario = new Usuario($documento, $tabla_usuario, $tipo, $pdo);
 $defaultConfig = (new ConfigVariables())->getDefaults();
 $fontDirs = $defaultConfig['fontDir'];
 
@@ -20,18 +23,18 @@ if ($tipo > 0) {
         $configuration = [
                 'fontDir' => array_merge($fontDirs,[__DIR__ . "/templates/fonts"]),
                 'fontdata' => $fontData + [
-                        'roboto_cod' => [
+                        'robotocod' => [
                                 'R' => 'Roboto-Condensed.ttf',
                                 'B' => 'Roboto-BoldCondensed.ttf',
                         ],
-                        'roboto_light' => [
+                        'robotolight' => [
                                 'R' => 'Roboto-Light.ttf'
                         ],
-                        'the_black' => [
+                        'theblack' => [
                                 'R' => 'The-Blacklist.ttf'
                         ]
                         ],
-                'default_font' => 'roboto_cod'];
+                'default_font' => 'robotocod'];
 } else {
         $configuration = [
                 'fontDir' => array_merge($fontDirs,[__DIR__ . "/templates/fonts"]),

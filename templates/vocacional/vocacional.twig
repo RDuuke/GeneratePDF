@@ -13,7 +13,7 @@ body
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-            -webkit-print-color-adjust: exact
+    -webkit-print-color-adjust: exact
 
 }
 .title {
@@ -74,7 +74,7 @@ p
 <div class="container">
     <p class="texto">Certifica que:</p>
     <div class="title"><i>{{ usuario.nombre | title }}</i></div>
-    <p>CC. {{ usuario.documento }}</p>
+    <p>con documento de identidad N°: {{ usuario.documento }}</p>
     <br>
     <div class="title"><i>{{ usuario.titulo }}</i></div>
     <p>{{ usuario.subtitulo | replace({'DD/MM/AAAA' : fecha })  }}</p>

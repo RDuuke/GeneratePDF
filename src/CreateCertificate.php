@@ -35,7 +35,8 @@ class CreateCertificate {
         $html = $this->view->render($this->template, [
             'usuario'  => $this->usuario->all(),
             'fecha' => date("d/m/Y")
-        ]);
+            ]);
+
         $this->pdf->Addpage('L');
         $this->pdf->showImageErrors = true.
         //$this->pdf->WriteHtml($css,1);
